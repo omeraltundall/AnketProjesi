@@ -27,3 +27,13 @@ public class Root
 {
     public List<Result> Results { get; set; }
 }
+
+public class Data
+{
+    public string AnketName { get; set; }
+
+    public string Root { get; set; }
+
+    public string Answer { get; set; } 
+
+}
