@@ -1,36 +1,41 @@
-using System.Text.Encodings.Web;
-using System.Text.Json;
-using AnketFinal.Model;
-using System.Text.Unicode;
 using AnketFinal.ViewModel;
 using Microsoft.Maui.Controls.PlatformConfiguration;
+using static AnketFinal.DeviceOrientationService;
+using AnketFinal.Services;
+using AnketFinal.Model;
+using System.Text.Json;
+using System.Text.Unicode;
+using System.Text.Encodings.Web;
+
 
 namespace AnketFinal.View;
-
-using static Android.Provider.Settings;
-
-
-
+//using static Android.Provider.Settings;
 
 public partial class QuestionsPage2 : ContentPage
 {
-
+    private readonly IDeviceIdService _deviceIdService;
     private HashSet<string> filledSurveyIds = new HashSet<string>();
     public QuestionsPage2(QuestionsViewModel questionsViewModel)
     {
         InitializeComponent();
         BindingContext = questionsViewModel;
+        _deviceIdService = DependencyService.Get<IDeviceIdService>();
     }
     public async void ClickSubmit(object sender, EventArgs e)
     {
+        //var id = UIDevice.CurrentDevice.IdentifierForVendor.AsString().Replace("-", "");
+        string id = _deviceIdService.GetDeviceId();
 
-        IGetDeviceInfo getDeviceInfo = new GetDeviceInfo();
-        var id = getDeviceInfo.GetDeviceID();
-        
+        //IGetDeviceInfo getDeviceInfo = new GetDeviceInfo();
+        //var id = getDeviceInfo.GetDeviceID();
+
+        //İlk defa mı yapılıyor anket kontrol
         if (IsSurveyFilled(id))
         {
             DisplayAlert("Alert", "You already filled this survey before.", "ok");
         }
+
+        //ilk defa ise kayıt
         else
         {
             List<Data> answer = new List<Data>();
@@ -69,7 +74,8 @@ public partial class QuestionsPage2 : ContentPage
                 answer.Add(answer2);
                 answer.Add(answer3);
                 // Burası da aynı şekilde kendi pcnde bir dosya seç
-               // string filepath = "D:\\kayýt\\cevaplar.txt";
+                //Kayıtlar "answer" listesinde kayıtlı
+                //string filepath = "D:\\kayýt\\cevaplar.txt";
 
                 //Türkçe karakterler ayarı
                 var encoderSettings = new TextEncoderSettings();
@@ -86,16 +92,17 @@ public partial class QuestionsPage2 : ContentPage
 
                 //File.WriteAllText(filepath, json);
 
-                //File.AppendAllText(filepath, json);
-                //cevaplar 'answer' da
-                DisplayAlert("Alert", "Your answers have been colected. Thank you", "Ok");
+               // File.AppendAllText(filepath, json);
+
+                DisplayAlert("Alert", "Your answers have been colected. Thank you!", "Ok");
                 AddFilledSurveyId(id);
             }
             else
             {
                 DisplayAlert("Alert", "Please answer all questions", "Ok");
             }
-           
+
+
         }
 
     }
@@ -108,17 +115,5 @@ public partial class QuestionsPage2 : ContentPage
         return filledSurveyIds.Contains(surveyId);
     }
 
-    public interface IGetDeviceInfo { string GetDeviceID(); }
-    internal class GetDeviceInfo : IGetDeviceInfo
-    {
-        public string GetDeviceID()
-        {
-            
-            var context = Android.App.Application.Context;
-
-            string id = Android.Provider.Settings.Secure.GetString(context.ContentResolver, Secure.AndroidId);
-
-            return id;
-        }
-    }
+   
 }

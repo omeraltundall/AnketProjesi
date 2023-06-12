@@ -44,8 +44,8 @@
         </StackLayout>
 
         <Button Text="Sonucu Gönder"
+                Clicked="ClickSubmit"
                 Style="{StaticResource ButtonOutline}"
-                Clicked="Button_Clicked"
                 Grid.Row="1"
                 Grid.ColumnSpan="2"
                 Margin="4"/>

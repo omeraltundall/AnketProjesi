@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AnketFinal.View.QuestionsPage"
@@ -50,8 +50,8 @@
         </StackLayout>
 
         <Button Text="Sonucu Gönder"
+                Clicked="ClickSubmit"
                 Style="{StaticResource ButtonOutline}"
-                Clicked="Button_Clicked"
                 Grid.Row="1"
                 Grid.ColumnSpan="2"
                 Margin="4"/>

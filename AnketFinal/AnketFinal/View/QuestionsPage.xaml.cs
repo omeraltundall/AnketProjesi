@@ -1,33 +1,39 @@
-using System.Text.Encodings.Web;
-using System.Text.Json;
-using AnketFinal.Model;
-using System.Text.Unicode;
 using AnketFinal.ViewModel;
 using Microsoft.Maui.Controls.PlatformConfiguration;
+using static AnketFinal.DeviceOrientationService;
+using AnketFinal.Services;
+using AnketFinal.Model;
+using System.Text.Json;
+using System.Text.Unicode;
+using System.Text.Encodings.Web;
 
 
-using static Android.Provider.Settings;
 namespace AnketFinal.View;
+//using static Android.Provider.Settings;
 
 public partial class QuestionsPage : ContentPage
 {
-
+    private readonly IDeviceIdService _deviceIdService;
     private HashSet<string> filledSurveyIds = new HashSet<string>();
     public QuestionsPage(QuestionsViewModel questionsViewModel)
     {
         InitializeComponent();
         BindingContext = questionsViewModel;
+        _deviceIdService = DependencyService.Get<IDeviceIdService>();
     }
     public async void ClickSubmit(object sender, EventArgs e)
     {
+        
+        string id = _deviceIdService.GetDeviceId();
 
-        IGetDeviceInfo getDeviceInfo = new GetDeviceInfo();
-        var id = getDeviceInfo.GetDeviceID();
-
+       
+        //İlk defa mı yapılıyor anket kontrol
         if (IsSurveyFilled(id))
         {
             DisplayAlert("Alert", "You already filled this survey before.", "ok");
         }
+
+        //ilk defa ise kayıt
         else
         {
             List<Data> answer = new List<Data>();
@@ -35,8 +41,6 @@ public partial class QuestionsPage : ContentPage
             Data answer2 = new();
             Data answer3 = new();
             Data answer4 = new();
-
-            
 
             answer1.Root = que1.Text; answer2.Root = que2.Text; answer3.Root = que3.Text; answer4.Root = que4.Text;
             answer1.AnketName = Title; answer2.AnketName = Title; answer3.AnketName = Title; answer4.AnketName = Title;
@@ -61,6 +65,8 @@ public partial class QuestionsPage : ContentPage
             else if (RadioButtonH.IsChecked)
                 answer4.Answer = RadioButtonH.Content.ToString();
 
+
+            //tüm sorular dolu mu kontrol
             if (answer1.Answer != null && answer2.Answer != null && answer3.Answer != null && answer4.Answer != null)
             {
 
@@ -69,6 +75,7 @@ public partial class QuestionsPage : ContentPage
                 answer.Add(answer3);
                 answer.Add(answer4);
                 //Buraya kendi pcnde bir dosya seç txt dosyasını oluşturmana gerek yok
+                //kayıtlar "answer"da listeli
                 //string filepath = "D:\\kayýt\\cevaplar.txt";
 
                 //Türkçe karakterler ayarı
@@ -86,16 +93,14 @@ public partial class QuestionsPage : ContentPage
 
                 //File.WriteAllText(filepath, json);
 
-               // File.AppendAllText(filepath, json);
-               //cevaplar 'answer' da
-                DisplayAlert("Alert", "Your answers have been colected. Thank you", "Ok");
+                // File.AppendAllText(filepath, json);
+                DisplayAlert("Alert", "Your answers have been colected. Thank you!", "Ok");
                 AddFilledSurveyId(id);
             }
             else
             {
                 DisplayAlert("Alert", "Please answer all questions", "Ok");
             }
-           
         }
 
     }
@@ -108,19 +113,5 @@ public partial class QuestionsPage : ContentPage
         return filledSurveyIds.Contains(surveyId);
     }
 
-    public interface IGetDeviceInfo { string GetDeviceID(); }
-    internal class GetDeviceInfo : IGetDeviceInfo
-    {
-        public string GetDeviceID()
-        {
-
-            var context = Android.App.Application.Context;
-
-            string id = Android.Provider.Settings.Secure.GetString(context.ContentResolver, Secure.AndroidId);
-
-            return id;
-        }
-    }
-
-
+   
 }
