@@ -1,0 +1,32 @@
+﻿{
+  "Results": [
+    {
+      "AnketName": "1. Örnek Anket",
+      "Questions": {
+        "que1": "1. Üniversite öğrencisi misiniz?",
+        "que2": "2. Çukurova Üniversitesinde mi okuyorsunuz?",
+        "que3": "3. Uygulamadan memnun musunuz?",
+        "que4": "4. Daha önce hiç benzeri bir üniversite uygulaması kullandınız mı?"
+      },
+      "Answers": {
+        "answer1": "Evet",
+        "answer2": "Hayır"
+      },
+      "NoOfQue": 4
+    },
+    {
+      "AnketName": "2. Örnek Anket",
+      "Questions": {
+        "que1": "1. Üniversite öğrencisi misiniz?",
+        "que2": "2. Çukurova Üniversitesinde mi okuyorsunuz?",
+        "que3": "3. Uygulamadan memnun musunuz?"
+      },
+      "Answers": {
+        "answer1": "İyi",
+        "answer2": "Orta",
+        "answer3": "Kötü"
+      },
+      "NoOfQue": 3
+    }
+  ]
+}

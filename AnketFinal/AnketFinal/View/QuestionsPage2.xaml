@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnketFinal.View.QuestionsPage2"
+             xmlns:viewmodel="clr-namespace:AnketFinal.ViewModel"
+             x:DataType="viewmodel:QuestionsViewModel"
+             Title="{Binding Root.Results[1].AnketName}">
+    <Grid ColumnDefinitions="*,*"
+          RowDefinitions="*,Auto"
+          ColumnSpacing="5">
+        <StackLayout
+                BackgroundColor="Transparent"
+                        Grid.ColumnSpan="2">
+            <Frame HeightRequest="175"
+                               Style="{StaticResource CardView}">
+                <StackLayout VerticalOptions="CenterAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                    <Label x:Name="que1" Text="{Binding Root.Results[1].Questions.que1}" FontSize="12"/>
+                    <RadioButton x:Name="RadioButtonA" Content= "{Binding Root.Results[1].Answers.answer1}" FontSize="12" GroupName="firstq" />
+                    <RadioButton  x:Name="RadioButtonB" Content="{Binding Root.Results[1].Answers.answer2}"  FontSize="12"  GroupName="firstq" />
+                    <RadioButton  x:Name="RadioButtonC" Content="{Binding Root.Results[1].Answers.answer3}"  FontSize="12"  GroupName="firstq" />
+                </StackLayout>
+            </Frame>
+            <Frame HeightRequest="175"
+                               Style="{StaticResource CardView}">
+                <StackLayout VerticalOptions="CenterAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                    <Label x:Name="que2" Text="{Binding Root.Results[1].Questions.que2}" FontSize="12"/>
+                    <RadioButton  x:Name="RadioButtonD" Content="{Binding Root.Results[1].Answers.answer1}"  FontSize="12"  GroupName="secondq" />
+                    <RadioButton  x:Name="RadioButtonE" Content="{Binding Root.Results[1].Answers.answer2}"  FontSize="12"   GroupName="secondq"/>
+                    <RadioButton  x:Name="RadioButtonF" Content="{Binding Root.Results[1].Answers.answer3}"  FontSize="12"   GroupName="secondq"/>
+                </StackLayout>
+            </Frame>
+            <Frame HeightRequest="175"
+                               Style="{StaticResource CardView}">
+                <StackLayout VerticalOptions="CenterAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                    <Label x:Name="que3" Text="{Binding Root.Results[1].Questions.que3}" FontSize="12"/>
+                    <RadioButton  x:Name="RadioButtonG" Content="{Binding Root.Results[1].Answers.answer1}"  FontSize="12"  GroupName="thirdq" />
+                    <RadioButton  x:Name="RadioButtonH" Content="{Binding Root.Results[1].Answers.answer2}"  FontSize="12"   GroupName="thirdq"/>
+                    <RadioButton  x:Name="RadioButtonj" Content="{Binding Root.Results[1].Answers.answer3}"  FontSize="12"   GroupName="thirdq"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+
+        <Button Text="Sonucu Gönder"
+                Style="{StaticResource ButtonOutline}"
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Margin="4"/>
+    </Grid>
+</ContentPage>

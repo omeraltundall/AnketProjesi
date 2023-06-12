@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnketFinal.MainPage"
+             xmlns:model="clr-namespace:AnketFinal.Model"
+             xmlns:viewmodel="clr-namespace:AnketFinal.ViewModel"
+             x:DataType="viewmodel:AnketsViewModel"
+             Title="{Binding Title}">
+    <Grid ColumnDefinitions="*,*"
+          ColumnSpacing="5"
+          RowDefinitions="*,Auto">
+
+        <CollectionView BackgroundColor="Transparent"
+                        Grid.ColumnSpan="2"
+                        ItemsSource="{Binding Results}"
+                        SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Root">
+                    <Grid Padding="5">
+                        <StackLayout Spacing="4">
+                            <Frame HeightRequest="75"
+                               Style="{StaticResource CardView}">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AnketsViewModel}}, Path=GoToQuestionsCommand}"
+                                        CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+                                <StackLayout VerticalOptions="CenterAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                                    <Label Text="{Binding Results[0].AnketName}" FontSize="14"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame HeightRequest="75"
+                               Style="{StaticResource CardView}">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AnketsViewModel}}, Path=GoToQuestions2Command}"
+                                        CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+                                <StackLayout VerticalOptions="CenterAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                                    <Label Text="{Binding Results[1].AnketName}" FontSize="14"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Ankete Başlayalım"
+                Style="{StaticResource ButtonOutline}"
+                Command="{Binding GetAnketsCommand}"
+                IsEnabled="{Binding IsNotBusy}"
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Margin="4"
+                />
+
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Grid.RowSpan="2"
+                           Grid.ColumnSpan="2"/>
+
+    </Grid>
+
+
+</ContentPage>

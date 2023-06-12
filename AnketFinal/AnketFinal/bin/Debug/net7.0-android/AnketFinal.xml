@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AnketFinal</name>
+    </assembly>
+    <members>
+        <member name="T:AnketFinal.ViewModel.AnketsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:AnketFinal.ViewModel.AnketsViewModel.goToQuestionsCommand">
+            <summary>The backing field for <see cref="P:AnketFinal.ViewModel.AnketsViewModel.GoToQuestionsCommand"/>.</summary>
+        </member>
+        <member name="P:AnketFinal.ViewModel.AnketsViewModel.GoToQuestionsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AnketFinal.ViewModel.AnketsViewModel.GoToQuestions(AnketFinal.Model.Root)"/>.</summary>
+        </member>
+        <member name="F:AnketFinal.ViewModel.AnketsViewModel.goToQuestions2Command">
+            <summary>The backing field for <see cref="P:AnketFinal.ViewModel.AnketsViewModel.GoToQuestions2Command"/>.</summary>
+        </member>
+        <member name="P:AnketFinal.ViewModel.AnketsViewModel.GoToQuestions2Command">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AnketFinal.ViewModel.AnketsViewModel.GoToQuestions2(AnketFinal.Model.Root)"/>.</summary>
+        </member>
+        <member name="F:AnketFinal.ViewModel.AnketsViewModel.getAnketsCommand">
+            <summary>The backing field for <see cref="P:AnketFinal.ViewModel.AnketsViewModel.GetAnketsCommand"/>.</summary>
+        </member>
+        <member name="P:AnketFinal.ViewModel.AnketsViewModel.GetAnketsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AnketFinal.ViewModel.AnketsViewModel.GetAnketsAsync"/>.</summary>
+        </member>
+        <member name="T:AnketFinal.ViewModel.QuestionsViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:AnketFinal.ViewModel.QuestionsViewModel.Root">
+            <inheritdoc cref="F:AnketFinal.ViewModel.QuestionsViewModel.root"/>
+        </member>
+        <member name="T:AnketFinal.BaseViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:AnketFinal.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:AnketFinal.BaseViewModel.isBusy"/>
+        </member>
+        <member name="P:AnketFinal.BaseViewModel.Title">
+            <inheritdoc cref="F:AnketFinal.BaseViewModel.title"/>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Root">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Root" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsNotBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsNotBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Root">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Root" generated properties.</summary>
+        </member>
+    </members>
+</doc>
