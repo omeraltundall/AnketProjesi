@@ -8,46 +8,46 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AnketFinal
-build_property.ProjectDir = D:\BitirmeProjesi\AnketFinal\AnketFinal\
+build_property.ProjectDir = /Users/denizugur/Downloads/AnketFinal-master-2/AnketFinal/
 
-[D:/BitirmeProjesi/AnketFinal/AnketFinal/App.xaml]
+[/Users/denizugur/Downloads/AnketFinal-master-2/AnketFinal/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AnketFinal.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[D:/BitirmeProjesi/AnketFinal/AnketFinal/AppShell.xaml]
+[/Users/denizugur/Downloads/AnketFinal-master-2/AnketFinal/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AnketFinal.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[D:/BitirmeProjesi/AnketFinal/AnketFinal/MainPage.xaml]
+[/Users/denizugur/Downloads/AnketFinal-master-2/AnketFinal/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AnketFinal.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[D:/BitirmeProjesi/AnketFinal/AnketFinal/Resources/Styles/Colors.xaml]
+[/Users/denizugur/Downloads/AnketFinal-master-2/AnketFinal/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AnketFinal.Resources.Styles.Colors.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
 
-[D:/BitirmeProjesi/AnketFinal/AnketFinal/Resources/Styles/Styles.xaml]
+[/Users/denizugur/Downloads/AnketFinal-master-2/AnketFinal/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AnketFinal.Resources.Styles.Styles.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
 
-[D:/BitirmeProjesi/AnketFinal/AnketFinal/View/QuestionsPage.xaml]
+[/Users/denizugur/Downloads/AnketFinal-master-2/AnketFinal/View/QuestionsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AnketFinal.View.QuestionsPage.xaml
-build_metadata.AdditionalFiles.TargetPath = View\QuestionsPage.xaml
-build_metadata.AdditionalFiles.RelativePath = View\QuestionsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View/QuestionsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View/QuestionsPage.xaml
 
-[D:/BitirmeProjesi/AnketFinal/AnketFinal/View/QuestionsPage2.xaml]
+[/Users/denizugur/Downloads/AnketFinal-master-2/AnketFinal/View/QuestionsPage2.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AnketFinal.View.QuestionsPage2.xaml
-build_metadata.AdditionalFiles.TargetPath = View\QuestionsPage2.xaml
-build_metadata.AdditionalFiles.RelativePath = View\QuestionsPage2.xaml
+build_metadata.AdditionalFiles.TargetPath = View/QuestionsPage2.xaml
+build_metadata.AdditionalFiles.RelativePath = View/QuestionsPage2.xaml

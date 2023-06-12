@@ -34,6 +34,6 @@ public class Data
 
     public string Root { get; set; }
 
-    public string Answer { get; set; } 
+    public string Answer { get; set; }
 
 }

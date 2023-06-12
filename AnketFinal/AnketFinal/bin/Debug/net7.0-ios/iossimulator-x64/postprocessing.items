@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="AnketFinal.app/AnketFinal">
+      <BCSymbolMapName>AnketFinal.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>AnketFinal.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/denizugur/Downloads/AnketFinal-master-2/AnketFinal/obj/Debug/net7.0-ios/iossimulator-x64/mtouch-symbols.list</SymbolFile>
+      <DSymName>AnketFinal.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/denizugur/Downloads/AnketFinal-master-2/AnketFinal</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>
