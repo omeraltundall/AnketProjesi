@@ -14,6 +14,7 @@ using static Android.Provider.Settings;
 
 public partial class QuestionsPage2 : ContentPage
 {
+
     private HashSet<string> filledSurveyIds = new HashSet<string>();
     public QuestionsPage2(QuestionsViewModel questionsViewModel)
     {
@@ -86,7 +87,7 @@ public partial class QuestionsPage2 : ContentPage
                 //File.WriteAllText(filepath, json);
 
                 //File.AppendAllText(filepath, json);
-                
+                //cevaplar 'answer' da
                 DisplayAlert("Alert", "Your answers have been colected. Thank you", "Ok");
                 AddFilledSurveyId(id);
             }
