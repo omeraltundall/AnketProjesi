@@ -87,6 +87,7 @@ public partial class QuestionsPage : ContentPage
                 //File.WriteAllText(filepath, json);
 
                // File.AppendAllText(filepath, json);
+               //cevaplar 'answer' da
                 DisplayAlert("Alert", "Your answers have been colected. Thank you", "Ok");
                 AddFilledSurveyId(id);
             }
