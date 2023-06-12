@@ -45,6 +45,7 @@
 
         <Button Text="Sonucu Gönder"
                 Style="{StaticResource ButtonOutline}"
+                Clicked="Button_Clicked"
                 Grid.Row="1"
                 Grid.ColumnSpan="2"
                 Margin="4"/>
