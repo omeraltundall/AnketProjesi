@@ -52,10 +52,10 @@ public partial class QuestionsPage2 : ContentPage
             answer.Add(answer1);
             answer.Add(answer2);
             answer.Add(answer3);
-            
-            string filepath = "D:\\kay�t\\cevaplar.txt";
+            // Burası da aynı şekilde kendi pcnde bir dosya seç
+            string filepath = "D:\\kayýt\\cevaplar.txt";
 
-            //T�rk�e karakterler ayar�
+            //Türkçe karakterler ayarı
             var encoderSettings = new TextEncoderSettings();
             encoderSettings.AllowCharacters('\u0436', '\u0430', '\u00D6', '\u00C7', '\u0131', '\u00DC', '\u00F6', '\u00E7', '\u00FC', '\u0131', '\u011F', '\u015F', '\u015E', '\u0130');
             encoderSettings.AllowRange(UnicodeRanges.BasicLatin);
@@ -72,23 +72,11 @@ public partial class QuestionsPage2 : ContentPage
 
             File.AppendAllText(filepath, json);
 
-            DisplayAlert("alert", "your answers have been colected. Thank you", "ok");
-
-
-
-
-
+            DisplayAlert("Alert", "Your answers have been colected. Thank you", "Ok");
         }
         else
         {
-            DisplayAlert("alert", "please answer all questions", "ok");
-
-
-
+            DisplayAlert("Alert", "Please answer all questions", "Ok");
         }
-
-
-
-
     }
 }
